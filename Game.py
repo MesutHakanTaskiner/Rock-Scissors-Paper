@@ -6,9 +6,9 @@ root = Tk()
 
 root.iconbitmap(r'C:\Users\Hakan\Desktop\Hakan\image\icon.ico')
 root.title('ROCK SCISSORS PAPER')
-root.geometry("600x700")
+root.geometry("535x700")
 
-#root.resizable(width = False, height = False)
+root.resizable(width = False, height = False)
 
 RockPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Rock-Scissors-Paper\Images\ROCK.png')
 PaperPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Rock-Scissors-Paper\Images\PAPER.png')
@@ -149,6 +149,9 @@ def if_else(user, computer):
 
         clear_button =  Button(root, text = "Clear score", command = clear)
         clear_button.grid(row = 10, column = 1)
+
+        exit_button = Button(root, text = "Exit!", command = root.quit, bg = "Black", fg = "White")
+        exit_button.grid(row = 13, column = 1)
 
         user_score_label = Label(root, text = user_score)
         user_score_label.grid(row = 9, column = 0)
