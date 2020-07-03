@@ -109,7 +109,6 @@ def if_else(user, computer):
                 label = Label(root, text = "Computer Won")
                 label.grid(row = 8, column = 2)
                 computer_score += 1
-                print("234325")
         elif user == image_list[0] and computer == image_list[2]:
                 label.grid_forget()
                 label = Label(root, text = "User Won")
@@ -148,6 +147,21 @@ def if_else(user, computer):
                 label = Label(root, text = "Draw")
                 label.grid(row = 8, column = 1)
 
+        clear_button =  Button(root, text = "Clear score", command = clear)
+        clear_button.grid(row = 10, column = 1)
+
+        user_score_label = Label(root, text = user_score)
+        user_score_label.grid(row = 9, column = 0)
+        computer_score_label = Label(root, text = computer_score)
+        computer_score_label.grid(row = 9, column = 2)
+
+def clear():
+        global user_score
+        global computer_score
+
+        user_score = 0
+        computer_score = 0
+
         user_score_label = Label(root, text = user_score)
         user_score_label.grid(row = 9, column = 0)
         computer_score_label = Label(root, text = computer_score)
@@ -161,5 +175,6 @@ Paper_Button.grid(row = 0, column = 1)
 
 Scissors_Button = Button(root, text = "Scissors", command = select_scissors)
 Scissors_Button.grid(row = 0, column = 2)
+
 
 root.mainloop()
