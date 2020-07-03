@@ -37,13 +37,15 @@ def select_rock():
 
     Computer_pick()
 
+    if_else(user, computer)
+
     mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black") 
     mylabel2.grid(row = 7, column = 0)
 
 def select_paper():
     global mylabel
     global user
-
+ 
     mylabel.grid_forget()
     mylabel.destroy()
 
@@ -53,6 +55,8 @@ def select_paper():
     user = "pyimage2"
 
     Computer_pick()
+
+    if_else(user, computer)
 
     mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black")
     mylabel2.grid(row = 7, column = 0)  
@@ -70,6 +74,8 @@ def select_scissors():
     user = "pyimage3"
 
     Computer_pick()
+
+    if_else(user, computer)
 
     mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black")
     mylabel2.grid(row = 7, column = 0)
@@ -89,35 +95,36 @@ def Computer_pick():
     mylabel3 = Label(root, text = "COMPUTER", fg = "White", bg = "Black")
     mylabel3.grid(row = 7, column = 2)
 
-if user == "pyimage1" and computer == "pyimage2":
-        label = Label(root, text = "Computer Won")
-        label.grid(row = 8, column = 3)
-elif user == "pyimage1" and computer == "pyimage3":
-        label2 = Label(root, text = "User Won")
-        label.grid(row = 8, column = 1)
-elif user == "pyimage2" and computer == "pyimage3":
-        label3 = Label(root, text = "Computer Won")
-        label.grid(row = 8, column = 1)
-elif user == "pyimage2" and computer == "pyimage1":
-        label4 = Label(root, text = "User Won")
-        label.grid(row = 8, column = 1)
-elif user == "pyimage3" and computer == "pyimage1":
-        label5 = Label(root, text = "Computer Won")
-        label.grid(row = 8, column = 1)
-elif user == "pyimage3" and computer == "pyimage2":
-        label6 = Label(root, text = "User Won")
-        label.grid(row = 8, column = 1)
-elif user == "pyimage1" and computer == "pyimage1":
-        label7 = Label(root, text = "Draw")
-        label.grid(row = 8, column = 1)
-elif user == "pyimage2" and computer == "pyimage2":
-        label8 = Label(root, text = "Draw")
-        label.grid(row = 8, column = 1)
-elif user == "pyimage3" and computer == "pyimage1":
-        label9 = Label(root, text = "Draw")
-        label.grid(row = 8, column = 1)
-
-
+def if_else(user, computer):
+    if user == "pyimage1" and computer == "pyimage2":
+            label = Label(root, text = "Computer Won")
+            label.grid(row = 8, column = 2)
+    elif user == "pyimage1" and computer == "pyimage3":
+            label2 = Label(root, text = "User Won")
+            label.grid(row = 8, column = 1)
+    elif user == "pyimage2" and computer == "pyimage3":
+            label3 = Label(root, text = "Computer Won")
+            label.grid(row = 8, column = 2)
+    elif user == "pyimage2" and computer == "pyimage1":
+            label4 = Label(root, text = "User Won")
+            label.grid(row = 8, column = 1)
+    elif user == "pyimage3" and computer == "pyimage1":
+            label5 = Label(root, text = "Computer Won")
+            label.grid(row = 8, column = 2)
+    elif user == "pyimage3" and computer == "pyimage2":
+            label6 = Label(root, text = "User Won")
+            label.grid(row = 8, column = 1)
+    elif user == "pyimage1" and computer == "pyimage1":
+            label7 = Label(root, text = "Draw")
+            label.grid(row = 8, column = 1)
+    elif user == "pyimage2" and computer == "pyimage2":
+            label8 = Label(root, text = "Draw")
+            label.grid(row = 8, column = 1)
+    elif user == "pyimage3" and computer == "pyimage1":
+            label9 = Label(root, text = "Draw")
+            label.grid(row = 8, column = 1)
+    else:
+        print("gasgag")
 
 
 Rock_Button = Button(root, text = "Rock", command = select_rock)
