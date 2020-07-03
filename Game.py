@@ -6,7 +6,7 @@ root = Tk()
 
 root.iconbitmap(r'C:\Users\Hakan\Desktop\Hakan\image\icon.ico')
 root.title('ROCK SCISSORS PAPER')
-root.geometry("700x700")
+root.geometry("600x700")
 
 #root.resizable(width = False, height = False)
 
@@ -18,10 +18,14 @@ image_list = [RockPhoto, PaperPhoto, ScissorsPhoto]
 
 user = ""
 computer = ""
+user_score = 0
+computer_score = 0
 
 mylabel = Label(root, text = "")
 computer_label = Label(root, text = "")
 label = Label(root, text = "")
+user_score_label = Label(root, text = "")
+computer_score_label = Label(root, text = "")
 
 def select_rock():
     global mylabel
@@ -95,30 +99,42 @@ def Computer_pick():
 
 def if_else(user, computer):
         global label
+        global user_score_label
+        global user_score
+        global computer_score_label
+        global computer_score
+
         if user == image_list[0] and computer == image_list[1]:
                 label.grid_forget()
                 label = Label(root, text = "Computer Won")
                 label.grid(row = 8, column = 2)
+                computer_score += 1
+                print("234325")
         elif user == image_list[0] and computer == image_list[2]:
                 label.grid_forget()
                 label = Label(root, text = "User Won")
                 label.grid(row = 8, column = 0)
+                user_score += 1
         elif user == image_list[1] and computer == image_list[2]:
                 label.grid_forget()
                 label = Label(root, text = "Computer Won")
                 label.grid(row = 8, column = 2)
+                computer_score += 1
         elif user == image_list[1] and computer == image_list[0]:
                 label.grid_forget()
                 label = Label(root, text = "User Won")
                 label.grid(row = 8, column = 0)
+                user_score += 1
         elif user == image_list[2] and computer == image_list[0]:
                 label.grid_forget()
                 label = Label(root, text = "Computer Won")
                 label.grid(row = 8, column = 2)
+                computer_score += 1
         elif user == image_list[2] and computer == image_list[1]:
                 label.grid_forget()
                 label = Label(root, text = "User Won")
                 label.grid(row = 8, column = 0)
+                user_score += 1
         elif user == image_list[0] and computer == image_list[0]:
                 label.grid_forget()
                 label = Label(root, text = "Draw")
@@ -131,6 +147,11 @@ def if_else(user, computer):
                 label.grid_forget()
                 label = Label(root, text = "Draw")
                 label.grid(row = 8, column = 1)
+
+        user_score_label = Label(root, text = user_score)
+        user_score_label.grid(row = 9, column = 0)
+        computer_score_label = Label(root, text = computer_score)
+        computer_score_label.grid(row = 9, column = 2)
 
 Rock_Button = Button(root, text = "Rock", command = select_rock)
 Rock_Button.grid(row = 0, column = 0)
