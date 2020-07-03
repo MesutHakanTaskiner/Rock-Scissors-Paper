@@ -47,7 +47,6 @@ def select_paper():
     global user
  
     mylabel.grid_forget()
-    mylabel.destroy()
 
     mylabel = Label(root, image = image_list[1])
     mylabel.grid(row = 2, column = 0)
@@ -66,8 +65,7 @@ def select_scissors():
     global user
 
     mylabel.grid_forget()
-    mylabel.destroy()
-
+    
     mylabel = Label(root, image = image_list[2])
     mylabel.grid(row = 2, column = 0)
 
@@ -85,8 +83,7 @@ def Computer_pick():
     global computer
 
     computer_label.grid_forget()
-    computer_label.destroy()
-
+   
     computer = random.choice(image_list)
 
     computer_label = Label(root, image = computer)
