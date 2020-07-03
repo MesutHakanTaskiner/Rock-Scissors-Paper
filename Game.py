@@ -25,55 +25,71 @@ computer_label = Label(root, text = "")
 def select_rock():
     global mylabel
     global user
+
     mylabel.grid_forget()
     mylabel.destroy()
+    
     mylabel = Label(root, image = image_list[0])
     mylabel.grid(row = 2, column = 0)
+
     user = "pyimage1"
+
     Computer_pick()
+
     mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black") 
     mylabel2.grid(row = 7, column = 0)
 
 def select_paper():
     global mylabel
     global user
+
     mylabel.grid_forget()
     mylabel.destroy()
+
     mylabel = Label(root, image = image_list[1])
     mylabel.grid(row = 2, column = 0)
+
     user = "pyimage2"
+
     Computer_pick()
+
     mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black")
     mylabel2.grid(row = 7, column = 0)  
 
 def select_scissors():
     global mylabel
     global user
+
     mylabel.grid_forget()
     mylabel.destroy()
+
     mylabel = Label(root, image = image_list[2])
     mylabel.grid(row = 2, column = 0)
+
     user = "pyimage3"
+
     Computer_pick()
+
     mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black")
     mylabel2.grid(row = 7, column = 0)
 
 def Computer_pick():
     global computer_label
     global computer
+
     computer_label.grid_forget()
     computer_label.destroy()
+
     computer = random.choice(image_list)
+
     computer_label = Label(root, image = computer)
     computer_label.grid(row = 2, column = 2)    
 
     mylabel3 = Label(root, text = "COMPUTER", fg = "White", bg = "Black")
     mylabel3.grid(row = 7, column = 2)
 
-    print(computer)
 if user == 'pyimage1' and computer == 'pyimage2':
     label = Label(root, text = "User Win")
-    print("dsfgds")
     label.grid(row = 8, column = 1)
 
 
