@@ -96,35 +96,35 @@ def Computer_pick():
     mylabel3.grid(row = 7, column = 2)
 
 def if_else(user, computer):
-    if user == "pyimage1" and computer == "pyimage2":
+    if   user == "pyimage1" and computer == "pyimage2":
             label = Label(root, text = "Computer Won")
             label.grid(row = 8, column = 2)
     elif user == "pyimage1" and computer == "pyimage3":
             label2 = Label(root, text = "User Won")
-            label.grid(row = 8, column = 1)
+            label2.grid(row = 8, column = 1)
     elif user == "pyimage2" and computer == "pyimage3":
             label3 = Label(root, text = "Computer Won")
-            label.grid(row = 8, column = 2)
+            label3.grid(row = 8, column = 2)
     elif user == "pyimage2" and computer == "pyimage1":
             label4 = Label(root, text = "User Won")
-            label.grid(row = 8, column = 1)
+            label4.grid(row = 8, column = 1)
     elif user == "pyimage3" and computer == "pyimage1":
             label5 = Label(root, text = "Computer Won")
-            label.grid(row = 8, column = 2)
+            label5.grid(row = 8, column = 2)
     elif user == "pyimage3" and computer == "pyimage2":
             label6 = Label(root, text = "User Won")
-            label.grid(row = 8, column = 1)
+            label6.grid(row = 8, column = 1)
     elif user == "pyimage1" and computer == "pyimage1":
             label7 = Label(root, text = "Draw")
-            label.grid(row = 8, column = 1)
+            label7.grid(row = 8, column = 1)
     elif user == "pyimage2" and computer == "pyimage2":
             label8 = Label(root, text = "Draw")
-            label.grid(row = 8, column = 1)
-    elif user == "pyimage3" and computer == "pyimage1":
+            label8.grid(row = 8, column = 1)
+    elif user == "pyimage3" and computer == "pyimage3":
             label9 = Label(root, text = "Draw")
-            label.grid(row = 8, column = 1)
+            label9.grid(row = 8, column = 1)
     else:
-        print("gasgag")
+        print("Kazandık.")
 
 
 Rock_Button = Button(root, text = "Rock", command = select_rock)
