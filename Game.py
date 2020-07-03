@@ -6,13 +6,13 @@ root = Tk()
 
 root.iconbitmap(r'C:\Users\Hakan\Desktop\Hakan\image\icon.ico')
 root.title('ROCK SCISSORS PAPER')
-root.geometry("535x700")
+root.geometry("700x700")
 
 root.resizable(width = False, height = False)
 
-RockPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Rock-Scissors-Paper\Images\ROCK.png')
-PaperPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Rock-Scissors-Paper\Images\PAPER.png')
-ScissorsPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Rock-Scissors-Paper\Images\SCISSORS.png')
+RockPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Hakan\Software\Github\Rock-Scissors-Paper\Images\ROCK.png')
+PaperPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Hakan\Software\Github\Rock-Scissors-Paper\Images\PAPER.png')
+ScissorsPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Hakan\Software\Github\Rock-Scissors-Paper\Images\SCISSORS.png')
 
 image_list = [RockPhoto, PaperPhoto, ScissorsPhoto]
 
@@ -172,6 +172,9 @@ def clear():
         computer_score_label = Label(root, text = computer_score)
         computer_score_label.grid(row = 9, column = 2)
 
+my_label = Label(root, text = "Your choice", bg = "Green", fg = "White")
+my_label.grid(row = 0, column = 4)
+
 Rock_Button = Button(root, text = "Rock", command = select_rock)
 Rock_Button.grid(row = 0, column = 0)
 
@@ -180,6 +183,7 @@ Paper_Button.grid(row = 0, column = 1)
 
 Scissors_Button = Button(root, text = "Scissors", command = select_scissors)
 Scissors_Button.grid(row = 0, column = 2)
+
 
 
 root.mainloop()
