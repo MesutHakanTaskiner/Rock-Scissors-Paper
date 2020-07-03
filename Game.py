@@ -43,7 +43,7 @@ def select_rock():
 
     if_else(user, computer)
 
-    mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black") 
+    mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Blue") 
     mylabel2.grid(row = 7, column = 0)
 
 def select_paper():
@@ -61,7 +61,7 @@ def select_paper():
 
     if_else(user, computer)
 
-    mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black")
+    mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Blue")
     mylabel2.grid(row = 7, column = 0)  
 
 def select_scissors():
@@ -79,7 +79,7 @@ def select_scissors():
 
     if_else(user, computer)
 
-    mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Black")
+    mylabel2 = Label(root, text = "PLAYER", fg = "White", bg = "Blue")
     mylabel2.grid(row = 7, column = 0)
 
 def Computer_pick():
@@ -93,7 +93,7 @@ def Computer_pick():
     computer_label = Label(root, image = computer)
     computer_label.grid(row = 2, column = 2)    
 
-    mylabel3 = Label(root, text = "COMPUTER", fg = "White", bg = "Black")
+    mylabel3 = Label(root, text = "COMPUTER", fg = "White", bg = "Blue")
     mylabel3.grid(row = 7, column = 2)
     
 
@@ -164,6 +164,8 @@ def clear():
 
         user_score = 0
         computer_score = 0
+
+        label.grid_forget()
 
         user_score_label = Label(root, text = user_score)
         user_score_label.grid(row = 9, column = 0)
