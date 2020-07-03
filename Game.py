@@ -6,7 +6,6 @@ root = Tk()
 
 root.iconbitmap(r'C:\Users\Hakan\Desktop\Hakan\image\icon.ico')
 root.title('ROCK SCISSORS PAPER')
-root.geometry("700x700")
 
 root.resizable(width = False, height = False)
 
@@ -172,17 +171,27 @@ def clear():
         computer_score_label = Label(root, text = computer_score)
         computer_score_label.grid(row = 9, column = 2)
 
-my_label = Label(root, text = "Your choice", bg = "Green", fg = "White")
-my_label.grid(row = 0, column = 4)
+def play():
+        root.geometry("700x700")
 
-Rock_Button = Button(root, text = "Rock", command = select_rock)
-Rock_Button.grid(row = 0, column = 0)
+        play_button.destroy()
 
-Paper_Button = Button(root, text = "Paper", command = select_paper)
-Paper_Button.grid(row = 0, column = 1)
+        my_label = Label(root, text = "Select", bg = "Green", fg = "White")
+        my_label.grid(row = 0, column = 4)
 
-Scissors_Button = Button(root, text = "Scissors", command = select_scissors)
-Scissors_Button.grid(row = 0, column = 2)
+        Rock_Button = Button(root, text = "Rock", command = select_rock)
+        Rock_Button.grid(row = 0, column = 0)
+
+        Paper_Button = Button(root, text = "Paper", command = select_paper)
+        Paper_Button.grid(row = 0, column = 1)
+
+        Scissors_Button = Button(root, text = "Scissors", command = select_scissors)
+        Scissors_Button.grid(row = 0, column = 2)
+
+root.geometry("30x30")
+play_button = Button(root, text = "Play", command = play)
+play_button.grid(row = 0, column = 0, padx = 100)
+play_button.place(x = 40, y = 0)
 
 
 
