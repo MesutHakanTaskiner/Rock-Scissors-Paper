@@ -151,6 +151,7 @@ def if_else(user, computer):
 
         exit_button = Button(root, text = "Exit!", command = root.quit, bg = "Black", fg = "White")
         exit_button.grid(row = 13, column = 1)
+        exit_button.place(x = 250, y = 600)
 
         user_score_label = Label(root, text = user_score)
         user_score_label.grid(row = 9, column = 0)
@@ -172,7 +173,7 @@ def clear():
         computer_score_label.grid(row = 9, column = 2)
 
 def play():
-        root.geometry("700x700")
+        root.geometry("600x700")
 
         play_button.destroy()
 
