@@ -9,9 +9,9 @@ root.title('ROCK SCISSORS PAPER')
 
 root.resizable(width = False, height = False)
 
-RockPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Hakan\Software\Github\Rock-Scissors-Paper\Images\ROCK.png')
-PaperPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Hakan\Software\Github\Rock-Scissors-Paper\Images\PAPER.png')
-ScissorsPhoto = PhotoImage(file = r'C:\Users\Hakan\Desktop\Hakan\Software\Github\Rock-Scissors-Paper\Images\SCISSORS.png')
+RockPhoto = ImageTk.PhotoImage(Image.open("ROCK.png"))
+PaperPhoto = ImageTk.PhotoImage(Image.open("PAPER.png"))
+ScissorsPhoto = ImageTk.PhotoImage(Image.open("SCISSORS.png"))
 
 image_list = [RockPhoto, PaperPhoto, ScissorsPhoto]
 
